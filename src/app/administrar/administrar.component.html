@@ -1,0 +1,27 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Foto</th>
+        <th><i class="fas fa-times"></i></th>
+        <th><i class="fas fa-pencil-alt"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td>{{ empleado.idEmpleado }}</td>
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.apellido }}</td>
+        <td>{{ empleado.email }}</td>
+        <td><img [src]="empleado.fotoperfil" alt="Foto de perfil"></td>
+        <td><button class="boton-modif" (click)="modificarEmpleado(empleado.idEmpleado)">Modificar</button></td>
+        <td><button class="boton-elim" (click)="eliminarEmpleado(empleado.idEmpleado)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- Footer -->
+<app-footer></app-footer>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'presa_angulo_edurne_dwec6_te1';
+  title = 'BIRT Consulting';
 }

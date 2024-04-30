@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+}
+  
+thead th {
+    background-color: #f2f2f2;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+  
+tbody td {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0.8rem;
+}
+
+tr:hover {
+    background-color: orange;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+
+button {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 5vh;
+}
+.boton-modif {
+    background-color: cornflowerblue;
+}
+.boton-elim {
+    background-color: red;
+}

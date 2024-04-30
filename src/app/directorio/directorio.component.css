@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+
+}
+.ficha {
+    
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.nombre {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.avatar img {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;  
+}
+.email {
+    color: #3b3b3b;
+} 

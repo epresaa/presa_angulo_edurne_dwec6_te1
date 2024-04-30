@@ -13,6 +13,7 @@ export class Empleado {
         this.fotoperfil = fotoperfil;
     }
 
+    // GETTERS
     public getIdEmpleado(): number {
         return this.idEmpleado;
     }
@@ -27,5 +28,22 @@ export class Empleado {
     }
     public getFotoPerfil(): string {
         return this.fotoperfil;
+    }
+
+    // SETTERS
+    public setIdEmpleado(id: number): void {
+        this.idEmpleado = id;
+    }
+    public setEmail(email: string): void {
+        this.email = email;
+    }
+    public setNombre(nombre: string): void {
+        this.nombre = nombre;
+    }
+    public setApellido(apellido: string): void {
+        this.apellido = apellido;
+    }
+    public setFotoPerfil(foto: string): void {
+        this.fotoperfil = foto;
     }
 }

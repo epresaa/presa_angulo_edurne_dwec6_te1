@@ -25,6 +25,7 @@ export class DirectorioComponent implements OnInit {
         })
       },
       error => {
+        console.log(<any>error);
       }
     );
     this._empleadosService.getUsuarioParte2().subscribe(

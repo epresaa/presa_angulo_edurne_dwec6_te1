@@ -1,4 +1,23 @@
-<p>eliminar works!</p>
+<h1>Revisa el usuario a eliminar</h1>
+<form>
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id" [(ngModel)]="emple.idEmpleado" disabled><br>
+  
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" [(ngModel)]="emple.email" disabled><br>
+  
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="emple.nombre" disabled><br>
+  
+    <label for="apellido">Apellido:</label><br>
+    <input type="text" id="apellido" name="apellido" [(ngModel)]="emple.apellido" disabled><br>
+  
+    <label for="fotoperfil">Foto de perfil:</label><br>
+    <input type="text" id="fotoperfil" name="fotoperfil" [(ngModel)]="emple.fotoperfil" disabled><br>
+  
+    <button type="submit" (click)="eliminar()">Eliminar</button>
+  </form>
+
 
 
 <!-- Footer -->

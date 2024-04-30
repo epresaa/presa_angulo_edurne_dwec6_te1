@@ -10,14 +10,36 @@ header {
     background-color: lightgreen;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 .navbar a {
     margin: 0 2rem;
 }
-.A {
+.enlaces {
     background-color: pink;
 }
-.B {
+.log {
     background-color: green;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log a,
+.log button {
+    padding: 0.7rem 1.5rem;
+    margin: 1rem;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: lightcyan;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+}
+.log button:hover, 
+.log a:hover {
+  background-color: #0056b3;
 }

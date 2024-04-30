@@ -13,14 +13,13 @@ export class AppComponent implements OnInit {
   title = 'BIRT Consulting';
 
   constructor(private router: Router, public authService: AutenticacionService, public localStorage: LocalStorageService) {}
-  // Inicia autenticacion 
+  
+  // Inicializar para autenticacion 
   ngOnInit(): void {
-    this.localStorage.setItem('usuarioAutenticado', 'false');
+
+    // CAMBIADO PARA PRUEBAS"!!!!!!!!! -> poner false
+    this.localStorage.setItem('usuarioAutenticado', 'true');
   }
-  // Valor autenticacion inicial
-    setAutenticacion(key: string, value: string): void {
-      localStorage.setItem('usuarioAutenticado', 'false');
-    }
 
   logout() {
     this.authService.logout(); 

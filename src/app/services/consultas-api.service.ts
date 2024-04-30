@@ -23,16 +23,25 @@ export class ConsultasApiService {
     return this._http.get(this.url);
   }
 
+  // GET: usuario por id
+  getUsuarioPorId(id: number): Observable <any> {
+    this.url = `https://reqres.in/api/users/${id}`;   // Solo funciona con comillas inversas!
+    return this._http.get(this.url);
+  }
 
   // POST
-
-
+  crearUsuario(datos: any): Observable <any> {
+    return this._http.post("https://reqres.in/api/users", datos);
+  }
 
   // PUT
-
-
+  modificarUsuario(id: number, datos: any): Observable <any> {
+    return this._http.put("https://reqres.in/api/users/" + id, datos);
+  }
 
   // DELETE
-
+  eliminarUsuario(id: number): Observable <any> {
+    return this._http.delete("https://reqres.in/api/users/" + id);
+  }
   
 }

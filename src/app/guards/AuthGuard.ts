@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
       return true; // Permitir la activación de la ruta
     } else {
       // Usuario no autenticado, redirigir al componente de inicio de sesión
-      this.router.navigate(['/login']);
+      this.router.navigate(['/logeo']);
       return false; // Evitar la activación de la ruta
     }
   }

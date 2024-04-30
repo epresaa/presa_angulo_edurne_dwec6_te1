@@ -12,8 +12,14 @@ export class LocalStorageService {
     localStorage.setItem(key, value);
   }
 
-  // Recoger valores
+  // Recoger clave
   getItem(key: string): string | null {
     return localStorage.getItem(key);
+  }
+
+  // Recoger valor de clave
+  getValue(key: string): string {
+    const item = localStorage.getItem(key);
+    return item !== null ? JSON.parse(item) : null;
   }
 }

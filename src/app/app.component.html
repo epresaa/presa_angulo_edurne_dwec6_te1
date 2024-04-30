@@ -8,7 +8,17 @@
     <a routerLink="/administrar">Administrar</a>
   </div>
   <div  class="B">
-    <a routerLink="/logeo">Logeo</a>
+      <li><a routerLink="/logeo">Log in</a></li>
+      <li><button (click)="logout()">Log out</button></li>
+    
+    <!-- <ng-container *ngIf="!authService.autenticadoSi()">
+      <li><a routerLink="/logeo">Log in</a></li>
+    </ng-container>
+    <ng-container *ngIfElse>
+      <li><button (click)="logout()">Log out</button></li>
+    </ng-container>  -->
+    <!-- <ng-container ng-show="!authService.autenticadoSi()"><a routerLink="/logeo">Log in</a></ng-container>
+      <ng-container ng-show="authService.autenticadoSi()"><li ><button (click)="logout()">Log out</button></li></ng-container>-->
   </div>
 </nav>
 <router-outlet></router-outlet>

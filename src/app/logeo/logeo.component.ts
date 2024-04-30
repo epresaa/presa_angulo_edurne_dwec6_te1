@@ -9,21 +9,27 @@ import { AccesoDatosService } from '../services/acceso-datos.service';
   providers: [LocalStorageService, AccesoDatosService]
 })
 export class LogeoComponent implements OnInit {
-  constructor(private localStorageService: LocalStorageService, private acccesoDatos: AccesoDatosService) {}
+  constructor(private localStorageService: LocalStorageService, private accesoDatos: AccesoDatosService) {}
 
   ngOnInit(): void {
-    this.cargarLocalStorage();
-    this.mostrarDatos();
-
+    this.cargarDatosEnLocalStorage();
   }
 
-  cargarLocalStorage( ) {
-    this.localStorageService.setItem('A','B');
-  }
+  cargarDatosEnLocalStorage() {
+    this.accesoDatos.getDatos().subscribe(
+      data => {
+        const lineas = data.split('\n'); // Dividir los datos en líneas
 
-  mostrarDatos() {
-    console.log(this.acccesoDatos.getDatos());
-    console.log('Hola');
-  }
+        lineas.forEach((linea, index) => {
+          const usuario = `usuario${index}`; 
+          this.localStorageService.setItem(usuario, linea.trim()); // Guardar la línea en el Local Storage
+        });
 
+        console.log('Datos guardados en Local Storage correctamente');
+      },
+      error => {
+        console.error('Error al cargar los datos:', error);
+      }
+    );
+  }
 }

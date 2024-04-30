@@ -1,25 +1,39 @@
 /* Título */ 
 header {
-    background-color: lightblue;
+    height: 25vh;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 } 
 
 /* Barra de navegación */
 .navbar {
     font-size: 1.5rem;
     display: flex;
-    background-color: lightgreen;
+    background-color: #E2F0F6 ;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
+    height: 10vh;
 }
 .navbar a {
     margin: 0 2rem;
 }
-.enlaces {
-    background-color: pink;
+
+    /* Derecha: enlaces */
+.enlaces a:link,
+.enlaces a:visited,
+.enlaces a:hover,
+.enlaces a:active {
+    text-decoration: none;
+    color: black;
 }
+.enlaces a:hover {
+    font-weight: 500;
+}
+
+    /* Izquierda: logeo */
 .log {
-    background-color: green;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -32,7 +46,8 @@ header {
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-    background-color: lightcyan;
+    background-color: #d28b21 ;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -41,5 +56,6 @@ header {
 }
 .log button:hover, 
 .log a:hover {
-  background-color: #0056b3;
+  background-color: #b5631a ;
+  color: white;
 }

@@ -1,21 +1,34 @@
-<form>
-    <label for="id">ID:</label><br>
-    <input type="text" id="id" name="id" [(ngModel)]="nuevoEmple.idEmpleado" required><br>
-  
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" [(ngModel)]="nuevoEmple.email" required><br>
-  
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevoEmple.nombre" required><br>
-  
-    <label for="apellido">Apellido:</label><br>
-    <input type="text" id="apellido" name="apellido" [(ngModel)]="nuevoEmple.apellido" required><br>
-  
-    <label for="fotoperfil">Foto de perfil:</label><br>
-    <input type="text" id="fotoperfil" name="fotoperfil" [(ngModel)]="nuevoEmple.fotoperfil" required><br>
-  
-    <button type="submit" (click)="crear()">Crear</button>
-  </form>
-  
-  <!-- Footer -->
-  <app-footer></app-footer>
+<main>
+  <section class="bienvenida">
+    <div>
+      <h2>Añadir un empleado</h2>
+      <hr class="subrayado">
+      <p>Rellena el formulario con los datos del empleado</p>
+      <p class="linea-2"><i class="fas fa-exclamation-circle"></i> Recuerda que cada empleado tiene un ID único</p>
+    </div>
+
+    <div class="form__empleado">
+      <form>
+          <label for="id">ID:</label><br>
+          <input type="text" id="id" name="id" [(ngModel)]="nuevoEmple.idEmpleado" required><br>
+        
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" [(ngModel)]="nuevoEmple.email" required><br>
+        
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevoEmple.nombre" required><br>
+        
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido" [(ngModel)]="nuevoEmple.apellido" required><br>
+        
+          <label for="fotoperfil">Foto de perfil:</label><br>
+          <input type="text" id="fotoperfil" name="fotoperfil" [(ngModel)]="nuevoEmple.fotoperfil" required><br>
+        
+          <button type="submit" (click)="crear()">CREAR</button>
+        </form>
+    </div>
+  </section>
+</main> 
+
+<!-- Footer -->
+<app-footer></app-footer>

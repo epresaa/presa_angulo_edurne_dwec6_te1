@@ -1,0 +1,50 @@
+/* Servicios */
+.container {
+    display: flex;
+    background-color: white;
+    border-radius: 2rem;
+    margin: 2rem auto;
+    width: 80%;
+}
+.linea-2 {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+}
+.mail {
+    text-decoration: underline;
+}
+
+/* Ficha */
+.ficha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+/* Lista */
+h4 {
+    margin: 2rem 1.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.vacaciones,
+.nominas {
+    list-style: none;
+}
+li {
+    margin: 1rem 3rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.underline {
+    text-decoration: underline;
+}
+i {
+    font-size: 1.1rem;
+}
+
+/* Imagen */
+img {
+    width: 45%;
+}

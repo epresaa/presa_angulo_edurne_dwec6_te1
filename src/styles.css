@@ -1,21 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+/* Normalización */
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
-    font-family: 'Montserrat', sans-serif;
 	line-height: 1;
 	margin: 0;
     padding: 0;
 }
-
 ol, ul {
 	list-style: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Estilos generales */ 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+.linea {
+	border: 1px solid #366277 ;
+}
+main {
+	margin: auto;
+	width: 90%;
+}
+h1 {
+	margin: 3rem 0;
+}
+h2 {
+	margin: 1rem 1rem;
+}
+section {
+    background-color: #e7b26375 ;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.bienvenida {
+    margin: 4rem 0;
+}
+.bienvenida p {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+.subrayado {
+    border: 0.3rem solid #b5631a ;
+    border-radius: 100px;
+}
+
+/* Formulario */
+.form__empleado {
+    background-color: white;
+    margin: 2rem auto;
+    width: 90%;
+}
+form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input,
+form label {
+    margin: 1rem 0;
+}
+form input {
+    width: 68%;
+    font-size: 1.3rem;
+    margin: 0.5rem 0 0 0;
+    background-color: hsla(39, 77%, 83%, 0.4);
+    border: hsla(0, 0%, 0%, 0.2) 1px solid;
+    padding-left: 0.5rem;
+    padding: 0.5rem;
+} 
+form label {
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 0 0;
+} 
+form button {
+    margin: 2rem 0;
+    width: 70%;
+    height: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.3rem;
+    background-color: white;
+    border:  1px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} 

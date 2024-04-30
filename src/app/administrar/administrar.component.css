@@ -1,23 +1,45 @@
+/* Nuevo empleado */ 
+.anadir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.anadir a {
+    padding: 0.7rem 2rem;
+    margin: 1rem 2rem;    
+    background-color: #618a44;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+}
+.anadir a:hover {
+    background-color: #4D6E36;
+}
+/* Tabla */
 table {
     width: 100%;
+    background-color: white;
 }
-  
 thead th {
     background-color: #f2f2f2;
     padding: 1rem 0;
     text-align: center;
     font-size: 1.3rem;
 }
-  
 tbody td {
     border-bottom: 1px solid #f2f2f2;
     padding: 0.8rem;
 }
-
 tr:hover {
-    background-color: orange;
+    background-color: #d28b213a;
 }
-
 img {
     display: block;
     margin: auto;
@@ -26,15 +48,21 @@ img {
     object-fit: cover;
 }
 
+/* Botones de tabla */
 button {
-    font-size: 1.3rem;
+    font-size: 20px;
+    color: white;
     width: 100%;
-    height: 40px;
+    height: 50px;
     cursor: pointer; 
-}
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}    
 .boton-modif {
-    background-color: cornflowerblue;
+    background-color: #618a44;
 }
 .boton-elim {
-    background-color: red;
+    background-color: #8B0000;
 }

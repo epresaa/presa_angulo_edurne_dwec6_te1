@@ -2,7 +2,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: lightblue;
+    background-color: #E2F0F6 ;
+    height: 7vh;
 }
 
 p {
@@ -21,4 +22,8 @@ li a:link {
 }
 li a:hover {
     font-weight: 500;
+}
+
+.linea {
+    margin-top: 2rem;
 }

@@ -1,12 +1,29 @@
-<form (ngSubmit)="login()">
-    <label>Usuario:</label>
-    <input type="text" [(ngModel)]="usuario" name="usuario">
-  
-    <label>Contraseña:</label>
-    <input type="password" [(ngModel)]="contrasena" name="contrasena">
-  
-    <button type="submit">Iniciar sesión</button>
-</form>
+<main>
+  <section class="bienvenida">
+    <div>
+      <h2>Log in</h2>
+      <hr class="subrayado">
+      <p>Acceso al portal de Adminsitración - Solo empleados de RRHH</p>
+    </div>
 
+    <div class="logeo">
+      <img src="../../assets/images/login.jpg">
+      <form (ngSubmit)="login()">
+        <p>ACCESO</p>
+        <label>Usuario:</label><br>
+        <input type="text" [(ngModel)]="usuario" name="usuario"><br>
+        <br>
+        <label>Contraseña:</label><br>
+        <input type="password" [(ngModel)]="contrasena" name="contrasena"><br>
+        <br>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+    </div>
+
+    
+  </section>
+  
+  
+</main>
   <!-- Footer -->
 <app-footer></app-footer>

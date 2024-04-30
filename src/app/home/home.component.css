@@ -1,0 +1,35 @@
+/* Seccion Bienvenida */
+.bienvenida__home p {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Seccion FAQ */ 
+.home__faq__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.home__faq h3 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+.home__faq p {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem 1.5rem 2.5rem;
+}
+.faq__pregunta {
+    background-color: white;
+    margin: 1rem;
+    width: 80%;
+    border-radius: 0 1rem 0 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Banner */
+img {
+    width: 100%;
+    margin: 2rem 0;
+}

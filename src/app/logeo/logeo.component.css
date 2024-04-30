@@ -1,0 +1,49 @@
+/* Seccion login */
+.logeo {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 60%;
+    margin: 1rem auto 2rem;
+}
+    /* Imagen */
+img {
+    width: 50%;
+    margin: 2rem 1rem 2rem 2rem;
+}
+    
+    /* Formulario */
+form {
+    width: 40%;
+    margin: 2rem 2rem 2rem 1rem;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+}
+form label {
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.5rem;
+}
+form input {
+    margin: 0.5rem 1rem;
+    font-size: 1.4rem;
+    background-color: antiquewhite;
+    border: 1px ;
+}
+form p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+form button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.3rem;
+    margin: 3rem 1rem;
+    height: 60px;
+    background-color: white;
+    border:  1px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}

@@ -1,3 +1,4 @@
+/* Fichas */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -5,7 +6,6 @@
 
 }
 .ficha {
-    
     text-align: center;
     font-size: 1.2rem;
     margin: 1rem 0;

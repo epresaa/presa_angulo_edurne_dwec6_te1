@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providers: [AutenticacionService]
 })
 export class AppComponent implements OnInit {
-  title = 'BIRT Consulting';
+  title = 'EPASA Consulting';
 
   constructor(private router: Router, public authService: AutenticacionService, public localStorage: LocalStorageService) {}
   

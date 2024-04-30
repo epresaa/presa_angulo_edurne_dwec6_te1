@@ -9,6 +9,7 @@ import { EliminarComponent } from './eliminar/eliminar.component';
 import { HomeComponent } from './home/home.component';
 import { LogeoComponent } from './logeo/logeo.component';
 import { ModificarComponent } from './modificar/modificar.component';
+import { ServiciosComponent } from './servicios/servicios.component';
 
 
 const routes: Routes = [  
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'crear', component: CrearComponent, canActivate: [AuthGuard] },
   { path: 'modificar/:id', component: ModificarComponent, canActivate: [AuthGuard] },
   { path: 'eliminar/:id', component: EliminarComponent, canActivate: [AuthGuard] },
-
+  { path: 'servicios', component: ServiciosComponent},
   { path: '**', component: HomeComponent }
 
 ];

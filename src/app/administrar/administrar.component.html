@@ -1,7 +1,15 @@
-<h1>Crear nuevo empleado</h1>
-<a routerLink="/crear">Insertar nuevo empleado</a>
-
-<h1>Gestión de empleados</h1>
+<main>
+  <section class="bienvenida">
+      <h2>Crear nuevo empleado</h2>
+      <hr class="subrayado">
+      
+      <div class="anadir">
+        <p>Añadir un nuevo empleado</p>
+        <a routerLink="/crear">AÑADIR</a>
+      </div>
+  </section>
+  <section class="bienvenida">
+<h2>Gestión de empleados</h2>
 <table>
     <thead>
       <tr>
@@ -21,11 +29,12 @@
         <td>{{ empleado.apellido }}</td>
         <td>{{ empleado.email }}</td>
         <td><img [src]="empleado.fotoperfil" alt="Foto de perfil"></td>
-        <td><button class="boton-modif" (click)="modificarEmpleado(empleado.idEmpleado)">Modificar</button></td>
-        <td><button class="boton-elim" (click)="eliminarEmpleado(empleado.idEmpleado)">Eliminar</button></td>
+        <td><button class="boton-modif" (click)="modificarEmpleado(empleado.idEmpleado)">MODIFICAR</button></td>
+        <td><button class="boton-elim" (click)="eliminarEmpleado(empleado.idEmpleado)">ELIMINAR</button></td>
       </tr>
     </tbody>
   </table>
-
+</section>
+</main>
 <!-- Footer -->
 <app-footer></app-footer>

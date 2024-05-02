@@ -11,18 +11,22 @@ import { Empleado } from '../models/Empleado';
 })
 
 export class ModificarComponent implements OnInit {
+  // Atributo
   emple: Empleado = new Empleado(0,'','','','');
   id!: number;
   
+  // Constructor: se pasa como parámetro la instancia única del servicio usado
+    // También un objeto ActivatedRoute: para obtener el id pasado por URL
   constructor(private route: ActivatedRoute, private consultasapi: ConsultasApiService) {}
 
+  // Método OnInit:
   ngOnInit(): void {
-    // Determinar id
+    // Determinar idpasado por URL
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       this.id = +idParam;
     
-      // Consulta
+      // Llamada a consulta GET: se rellena formulario
       this.consultasapi.getUsuarioPorId(this.id).subscribe(
         result => {
           console.log(result);
@@ -41,6 +45,8 @@ export class ModificarComponent implements OnInit {
     }
   }
 
+  // Método modificar: botón modificar
+    // Llama a la consulta PUT: se modifica el usuario
   modificar() {
     this.consultasapi.modificarUsuario(this.id, this.emple).subscribe(
       result => {

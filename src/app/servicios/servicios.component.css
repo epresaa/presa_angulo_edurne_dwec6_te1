@@ -1,8 +1,7 @@
-/* Servicios */
+/* Section servicios */
 .container {
     display: flex;
     background-color: white;
-    border-radius: 2rem;
     margin: 2rem auto;
     width: 80%;
 }
@@ -14,7 +13,7 @@
     text-decoration: underline;
 }
 
-/* Ficha */
+    /* Ficha de servicios */
 .ficha {
     display: flex;
     flex-direction: column;
@@ -22,7 +21,7 @@
     width: 50%;
 }
 
-/* Lista */
+    /* Lista */
 h4 {
     margin: 2rem 1.5rem 1rem;
     font-size: 1.5rem;

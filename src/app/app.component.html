@@ -1,28 +1,24 @@
+<!-- Titulo -->
 <header>
   <img src="../assets/images/epasa_logo_horizontal_v2.png">
 </header>
 
 <hr class="linea">
 
+<!-- Barra de navegación -->
 <nav class="navbar">
+  <!-- Enlaces a las páginas -->
   <div class="enlaces">
     <a routerLink="/">Home</a>  |  
     <a routerLink="/servicios">Servicios</a>  |  
     <a routerLink="/directorio">Directorio</a>  |  
     <a routerLink="/administrar">Administrar</a>
   </div>
+
+  <!-- Logeo -->
   <div  class="log">
       <li><a routerLink="/logeo">Log in</a></li>
       <li><button (click)="logout()">Log out</button></li>
-    
-    <!-- <ng-container *ngIf="!authService.autenticadoSi()">
-      <li><a routerLink="/logeo">Log in</a></li>
-    </ng-container>
-    <ng-container *ngIfElse>
-      <li><button (click)="logout()">Log out</button></li>
-    </ng-container>  -->
-    <!-- <ng-container ng-show="!authService.autenticadoSi()"><a routerLink="/logeo">Log in</a></ng-container>
-      <ng-container ng-show="authService.autenticadoSi()"><li ><button (click)="logout()">Log out</button></li></ng-container>-->
   </div>
 </nav>
 

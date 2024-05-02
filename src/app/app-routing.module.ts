@@ -11,15 +11,16 @@ import { LogeoComponent } from './logeo/logeo.component';
 import { ModificarComponent } from './modificar/modificar.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 
-
+// Rutas reconocidas por la aplicación
+  // Algunas rutas son solo accesibles tras el logeo: están protegidas por la clase AuthGuard
 const routes: Routes = [  
   { path: '', component: HomeComponent },
-  { path: 'administrar', component: AdministrarComponent, canActivate: [AuthGuard] },
+  { path: 'administrar', component: AdministrarComponent, canActivate: [AuthGuard] }, // Ruta protegida por clase AuthGuard
   { path: 'directorio', component: DirectorioComponent },
   { path: 'logeo', component: LogeoComponent },
-  { path: 'crear', component: CrearComponent, canActivate: [AuthGuard] },
-  { path: 'modificar/:id', component: ModificarComponent, canActivate: [AuthGuard] },
-  { path: 'eliminar/:id', component: EliminarComponent, canActivate: [AuthGuard] },
+  { path: 'crear', component: CrearComponent, canActivate: [AuthGuard] },             // Ruta protegida por clase AuthGuard
+  { path: 'modificar/:id', component: ModificarComponent, canActivate: [AuthGuard] }, // Ruta protegida por clase AuthGuard
+  { path: 'eliminar/:id', component: EliminarComponent, canActivate: [AuthGuard] },   // Ruta protegida por clase AuthGuard
   { path: 'servicios', component: ServiciosComponent},
   { path: '**', component: HomeComponent }
 

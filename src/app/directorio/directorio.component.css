@@ -1,9 +1,8 @@
-/* Fichas */
+/* Fichas de empleados */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 2rem; 
-
 }
 .ficha {
     text-align: center;

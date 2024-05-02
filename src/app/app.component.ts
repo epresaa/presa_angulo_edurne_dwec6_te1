@@ -9,21 +9,24 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.css',
   providers: [AutenticacionService]
 })
+
 export class AppComponent implements OnInit {
+  // Atributos
   title = 'EPASA Consulting';
 
+  // Constructor: recibe como parámetros un router y las instancias únicas de los 2 servicios usados
   constructor(private router: Router, public authService: AutenticacionService, public localStorage: LocalStorageService) {}
   
-  // Inicializar para autenticacion 
+  // Método OnInit: 
   ngOnInit(): void {
-
-    // CAMBIADO PARA PRUEBAS"!!!!!!!!! -> poner false
-    this.localStorage.setItem('usuarioAutenticado', 'true');
+    // Inicializa el valor usuarioAutenticado para futura autenticacion 
+    this.localStorage.setItem('usuarioAutenticado', 'false');
   }
 
+  // Método logout: llama al servicio de autenticación que contiene el método logout()
+  // Después redirige a la página de inicio
   logout() {
     this.authService.logout(); 
-    this.router.navigate(['/']);  // Sale a la página de inicio
+    this.router.navigate(['/']);  
   }
-
 }

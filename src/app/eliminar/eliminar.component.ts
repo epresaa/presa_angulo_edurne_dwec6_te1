@@ -8,19 +8,24 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './eliminar.component.html',
   styleUrl: './eliminar.component.css'
 })
+
 export class EliminarComponent implements OnInit {
+  // Atributos
   emple: Empleado = new Empleado(0,'','','','');
   id!: number;
 
+  // Constructor: se pasa como parámetro la instancia única del servicio usado
+    // También un objeto ActivatedRoute: para obtener el id pasado por URL
   constructor(private consultasapi: ConsultasApiService, private route: ActivatedRoute) {}
 
+  // Método OnInit: 
   ngOnInit(): void {
-    // Determinar id
+    // Determinar id pasado por URL
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       this.id = +idParam;
     
-      // Consulta: se rellena formulario
+      // Llamada a consulta GET: se rellena formulario
       this.consultasapi.getUsuarioPorId(this.id).subscribe(
         result => {
           console.log(result);
@@ -39,6 +44,8 @@ export class EliminarComponent implements OnInit {
     }
   }
 
+  // Método eliminar: botón eliminar
+    // Llama a la consulta DELETE: se elimina el usuario
   eliminar() {
     let confirmar = window.confirm('¿Seguro que quieres eliminar el usuario?');
     if(confirmar) {

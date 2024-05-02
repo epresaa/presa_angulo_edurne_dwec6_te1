@@ -1,4 +1,5 @@
 <main>
+  <!-- Section 1: Crear empleados -->
   <section class="bienvenida">
       <h2>Crear nuevo empleado</h2>
       <hr class="subrayado">
@@ -8,33 +9,36 @@
         <a routerLink="/crear">AÑADIR</a>
       </div>
   </section>
+  
+  <!-- Section 2: Tabla de empleados -->
   <section class="bienvenida">
-<h2>Gestión de empleados</h2>
-<table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Email</th>
-        <th>Foto</th>
-        <th><i class="fas fa-times"></i></th>
-        <th><i class="fas fa-pencil-alt"></i></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let empleado of empleados">
-        <td>{{ empleado.idEmpleado }}</td>
-        <td>{{ empleado.nombre }}</td>
-        <td>{{ empleado.apellido }}</td>
-        <td>{{ empleado.email }}</td>
-        <td><img [src]="empleado.fotoperfil" alt="Foto de perfil"></td>
-        <td><button class="boton-modif" (click)="modificarEmpleado(empleado.idEmpleado)">MODIFICAR</button></td>
-        <td><button class="boton-elim" (click)="eliminarEmpleado(empleado.idEmpleado)">ELIMINAR</button></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+    <h2>Gestión de empleados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Foto</th>
+          <th><i class="fas fa-times"></i></th>
+          <th><i class="fas fa-pencil-alt"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.idEmpleado }}</td>
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.apellido }}</td>
+          <td>{{ empleado.email }}</td>
+          <td><img [src]="empleado.fotoperfil" alt="Foto de perfil"></td>
+          <td><button class="boton-modif" (click)="modificarEmpleado(empleado.idEmpleado)">MODIFICAR</button></td>
+          <td><button class="boton-elim" (click)="eliminarEmpleado(empleado.idEmpleado)">ELIMINAR</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </main>
+
 <!-- Footer -->
 <app-footer></app-footer>

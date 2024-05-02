@@ -1,3 +1,4 @@
+/* Footer */
 footer {
     display: flex;
     align-items: center;
@@ -9,7 +10,6 @@ footer {
 p {
     margin-left: 2rem;
 }
-
 .lista-footer {
     display: flex;
 }
@@ -23,7 +23,6 @@ li a:link {
 li a:hover {
     font-weight: 500;
 }
-
 .linea {
     margin-top: 2rem;
 }

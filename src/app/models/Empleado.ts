@@ -1,10 +1,13 @@
+// Clase Empleado: clase que se usará para instanciar objetos Empleado  
 export class Empleado {
+    // Atributos
     public idEmpleado: number;
     public email: string;
     public nombre: string;
     public apellido: string;
     public fotoperfil: string;
 
+    // Constructor
     constructor(idEmpleado: number, email: string, nombre: string, apellido: string, fotoperfil: string) {
         this.idEmpleado = idEmpleado;
         this.email = email;

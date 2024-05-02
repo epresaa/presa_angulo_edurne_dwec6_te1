@@ -7,12 +7,16 @@ import { Empleado } from '../models/Empleado';
   templateUrl: './crear.component.html',
   styleUrl: './crear.component.css'
 })
+
 export class CrearComponent {
-  nuevoEmple: Empleado = new Empleado(0, '', '', '', '');
+  // Atributos
+  public nuevoEmple: Empleado = new Empleado(0, '', '', '', '');
     
+  // Constructor: se pasa como parámetro la instancia única del servicio usado
   constructor(private consultasapi: ConsultasApiService) {}
 
-
+  // Método crear
+  // Llama a consultas de POST: introducir nuevo usuario
   crear() {
     this.consultasapi.crearUsuario(this.nuevoEmple).subscribe(
       result => {

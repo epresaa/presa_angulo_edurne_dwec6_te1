@@ -10,13 +10,15 @@ import { ConsultasApiService } from '../services/consultas-api.service';
 })
 
 export class DirectorioComponent implements OnInit {
+  // Atributos
   public empleados: Array<Empleado> = [];
 
-  // Se pasa como parámetro la instancia única del servicio
+  // Se pasa como parámetro la instancia única del servicio usado
   constructor(private _empleadosService: ConsultasApiService) {} 
 
+  // Método OnInit
   ngOnInit(): void {
-    // Llamo a la consulta programada en el servicio
+    // Llamada a consultas de GET: mostrar los empleados 
     this._empleadosService.getUsuarioParte1().subscribe(
       result => {
         result.data.forEach((usuario: any) => {

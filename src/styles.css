@@ -1,4 +1,6 @@
-/* Normalización */
+/* ESTILOS COMUNES A TODO EL SITIO */
+
+    /* Normalización */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Estilos generales */ 
+    /* Estilos generales */ 
 body {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -50,7 +52,7 @@ section {
     border-radius: 100px;
 }
 
-/* Formulario */
+    /* Formularios */
 .form__empleado {
     background-color: white;
     margin: 2rem auto;

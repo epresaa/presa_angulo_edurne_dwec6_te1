@@ -5,19 +5,25 @@ import { LocalStorageService } from '../services/local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
 
+// Clase AuthGuard: encargada de poner guardas en determinadas rutas
+export class AuthGuard implements CanActivate {
+  // Constructor: recive como parámetros las rutas y el servicio LocalStorage 
   constructor(private router: Router, private localStorageService: LocalStorageService) {}
 
+  // Método canActivate: determina cuando se puede acceder a las rutas
   canActivate(): boolean {
-    // Verificar si el usuario está autenticado
+    // Determinar si usuario está autenticado
     const usuarioAutenticado = this.localStorageService.getItem('usuarioAutenticado');
+    
+    // Autenticado: permitir acceso a ruta (activada)
     if (usuarioAutenticado === 'true') {
-      return true; // Permitir la activación de la ruta
+      return true; 
+    
+    // No autenticado: no permitir -> redirige a página de /logeo
     } else {
-      // Usuario no autenticado, redirigir al componente de inicio de sesión
       this.router.navigate(['/logeo']);
-      return false; // Evitar la activación de la ruta
+      return false; 
     }
   }
 }

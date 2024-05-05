@@ -18,6 +18,18 @@ export class CrearComponent {
   // Método crear
   // Llama a consultas de POST: introducir nuevo usuario
   crear() {
+    // Validación de campos
+    if(!this.nuevoEmple.email || !this.nuevoEmple.nombre || !this.nuevoEmple.apellido) {
+      alert('Debes cubrir todos los campos marcados como obligatorios');
+      return;   // NO se realiza consulta
+    }
+
+    // Validación de email corporativo
+    if(!this.nuevoEmple.email.endsWith('@reqres.in')) {
+      alert('El email no es válido: ingresa el email corporativo @reqres.in');
+      return;   // NO se realiza consulta
+    }
+    
     this.consultasapi.crearUsuario(this.nuevoEmple).subscribe(
       result => {
         console.log('Usuario creado con éxito:', result);

@@ -48,6 +48,18 @@ export class ModificarComponent implements OnInit {
   // Método modificar: botón modificar
     // Llama a la consulta PUT: se modifica el usuario
   modificar() {
+    // Validación de campos
+    if(!this.emple.email || !this.emple.nombre || !this.emple.apellido) {
+      alert('Debes cubrir todos los campos marcados como obligatorios');
+      return;   // NO se realiza consulta
+    }
+
+    // Validación de email corporativo
+    if(!this.emple.email.endsWith('@reqres.in')) {
+      alert('El email no es válido: ingresa el email corporativo @reqres.in');
+      return;   // NO se realiza consulta
+    }
+
     this.consultasapi.modificarUsuario(this.id, this.emple).subscribe(
       result => {
         console.log('Usuario modificado con éxito:', result);
